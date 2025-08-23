@@ -1,4 +1,6 @@
+// src/pages/Science.jsx
 import React from "react";
+import { Link } from "react-router-dom";   // ✅ import Link
 import "./Science.css";
 import scienceImg from "../assets/science.jpg";
 
@@ -6,8 +8,6 @@ export default function Science() {
   return (
     <section className="sci-section" aria-labelledby="sci-title">
       <div className="sci-wrap">
-
-        {/* Header */}
         <header className="sci-head">
           <span className="sci-pill">Science</span>
           <h1 id="sci-title">Science Tuition</h1>
@@ -19,7 +19,6 @@ export default function Science() {
           </p>
         </header>
 
-        {/* Main card */}
         <div className="sci-card">
           <div className="sci-content">
             <div className="sci-block">
@@ -45,7 +44,8 @@ export default function Science() {
             </div>
 
             <div className="sci-cta">
-              <a className="sci-btn" href="/contact">📘 Contact Us </a>
+              {/* ✅ use the Science button class, and Link handles SPA routing */}
+              <Link className="sci-btn" to="/contact">📘 Contact Us</Link>
               <p className="sci-note">We’ll map a plan that fits your child’s goals and timeline.</p>
             </div>
           </div>

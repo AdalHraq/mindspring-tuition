@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";      // use client-side navigation
 import "./English.css";
-import englishImg from "../assets/english.jpg"; // already in your repo
+import englishImg from "../assets/english.jpg";
 
 export default function English() {
   return (
@@ -42,8 +43,10 @@ export default function English() {
             </div>
 
             <div className="eng-cta">
-              <a className="eng-btn" href="/contact">📘 Contact Us </a>
-              <span className="eng-note">We’ll map a plan that fits your child’s goals & timeline.</span>
+              <Link className="eng-btn" to="/contact">📘 Contact Us</Link>
+              <span className="eng-note">
+                We’ll map a plan that fits your child’s goals & timeline.
+              </span>
             </div>
           </div>
 
@@ -68,16 +71,7 @@ export default function English() {
           </article>
         </div>
       </div>
-
-      {/* soft wave at bottom */}
-      <div className="eng-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
-          <path
-            fill="#ffffff"
-            d="M0,64L60,64C120,64,240,64,360,69.3C480,75,600,85,720,85.3C840,85,960,75,1080,69.3C1200,64,1320,64,1380,64H1440V110H0Z"
-          />
-        </svg>
-      </div>
+      {/* 👋 Wave removed */}
     </section>
   );
 }

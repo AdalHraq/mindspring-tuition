@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";   // use Link for SPA navigation
 import "./Maths.css";
-import mathsImage from "../assets/maths-tutoring.jpg"; // adjust if your filename differs
+import mathsImage from "../assets/maths-tutoring.jpg";
 
 export default function Maths() {
   return (
@@ -44,8 +45,10 @@ export default function Maths() {
             </div>
 
             <div className="m-cta">
-              <a className="m-btn" href="/contact">📘 Contact Us </a>
-              <p className="m-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+              <Link className="m-btn" to="/contact">📘 Contact Us</Link>
+              <p className="m-note">
+                We’ll map a plan that fits your child’s goals and timeline.
+              </p>
             </div>
           </div>
 
@@ -54,7 +57,7 @@ export default function Maths() {
           </figure>
         </div>
 
-        {/* Optional mini cards under main card */}
+        {/* Mini cards */}
         <div className="m-mini">
           <div className="mini-card">
             <h3>Exam Skills</h3>
@@ -71,13 +74,7 @@ export default function Maths() {
         </div>
       </div>
 
-      {/* Decorative wave kept underneath content */}
-      <div className="m-wave" aria-hidden="true">
-        <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-          <path fill="#ffffff"
-            d="M0,48L48,53.3C96,59,192,69,288,69.3C384,69,480,59,576,53.3C672,48,768,48,864,58.7C960,69,1056,91,1152,96C1248,101,1344,91,1392,85.3L1440,80V80H0Z" />
-        </svg>
-      </div>
+      {/* 👋 Removed the wave */}
     </section>
   );
 }
