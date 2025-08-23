@@ -121,25 +121,23 @@
 }
 
 /* Contact form */
-/* Apply same base style for all inputs + textarea */
 .contact-form input,
 .contact-form textarea {
-  width: 100%;                  /* full width of the grid cell */
-  padding: 14px 16px;           /* comfy padding */
-  border: 1px solid #d1d5db;    /* subtle grey border */
-  border-radius: 10px;          /* smooth rounded corners */
-  background: #f9fafb;          /* light grey background */
-  font-size: 16px;              /* readable text */
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  background: #f9fafb;
+  font-size: 16px;
   line-height: 1.5;
   transition: border-color 0.2s, box-shadow 0.2s;
-  box-sizing: border-box;       /* ensures padding doesn't shrink the box */
+  box-sizing: border-box;
 }
 
-/* Focus effect for accessibility */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #ffb300;        /* your brand yellow */
+  border-color: #ffb300;
   box-shadow: 0 0 0 3px rgba(255, 179, 0, 0.25);
 }
 
@@ -150,28 +148,25 @@
   display: block;
 }
 
-/* Give each field some breathing room */
 .field {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
 }
 
-/* Larger textarea */
 .contact-form textarea {
-  min-height: 140px;  /* tall enough for readability */
-  resize: vertical;   /* allow vertical resizing only */
+  min-height: 140px;
+  resize: vertical;
 }
 
-/* Grid tweak: Name + Email sit side by side nicely */
+/* Grid tweak */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;   /* breathing space between fields */
+  gap: 20px;
 }
-
 .field.full {
-  grid-column: 1 / -1; /* spans full width for Phone + Message + Checkbox */
+  grid-column: 1 / -1;
 }
 
 /* errors */
@@ -205,7 +200,6 @@
   transform: translateY(-2px);
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.1);
 }
-
 .sent-note {
   margin-top: 0.7rem;
   color: #475569;
@@ -214,10 +208,15 @@
 
 /* responsive */
 @media (max-width: 680px) {
-  .form-grid { grid-template-columns: 1fr; }
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 520px) {
-  .soc { width: 64px; height: 64px; }
+  .soc {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 /* Checkbox row alignment */
@@ -225,32 +224,60 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  flex-wrap: wrap;           /* lets the error wrap below on small screens */
+  flex-wrap: wrap;
   margin-top: 6px;
 }
-
 .field.checkbox input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #ffb300;     /* brand-coloured checkbox (modern browsers) */
+  accent-color: #ffb300;
 }
-
 .field.checkbox label {
   cursor: pointer;
   color: #0f172a;
   line-height: 1.5;
 }
-
-/* Make the error sit underneath, aligned with the text */
 .field.checkbox .error {
   flex-basis: 100%;
-  margin-left: 32px;         /* lines up under the label text, not under the box */
+  margin-left: 32px;
 }
-
-/* Optional: tighten spacing on very small screens */
 @media (max-width: 480px) {
   .field.checkbox .error {
     margin-left: 0;
   }
 }
+
+/* --- MOBILE-ONLY FIXES --- */
+@media (max-width: 680px) {
+  .contact-page {
+    background: #000;
+    color: #fff;
+    padding-bottom: max(4rem, env(safe-area-inset-bottom) + 24px);
+  }
+
+  .contact-header h1 { color: #fff; }
+  .contact-header p  { color: #e2e8f0; }
+
+  .contact-card        { background:#fff; color:#0f172a; }
+  .contact-card h2     { color:#0f172a; }
+  .contact-card p,
+  .contact-card a      { color:#475569; }
+
+  .contact-form label,
+  .field.checkbox label { color:#fff; }
+
+  .contact-form input,
+  .contact-form textarea {
+    background:#f9fafb;
+    color:#0f172a;
+  }
+
+  .submit-btn {
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 14px 30px rgba(0,0,0,.18);
+  }
+}
+
+
