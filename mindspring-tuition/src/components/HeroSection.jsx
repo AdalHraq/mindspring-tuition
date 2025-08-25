@@ -34,7 +34,7 @@ function HeroSection() {
       <div className="hero-container">
         {/* LEFT SIDE TEXT */}
         <div className="hero-text">
-          <h1>Achieve 11+ Success with Confidence</h1>
+          <h1>Achieve 11+ & GCSE, sprint to success, and achieve academic excellence</h1>
           <p>Tailored lessons, expert tutors, and a proven track record of results.</p>
           {/* ❌ Removed buttons completely */}
         </div>
