@@ -60,17 +60,83 @@ export default function About() {
         </div>
 
         {/* Offers Card */}
-        <article className="about-card offers-card">
-          <h2>Current Offers</h2>
-          <ul className="about-list">
-            <li><span className="dot amber" /> All block pre-booked lessons – <strong>10% discount</strong> on fees</li>
-            <li><span className="dot blue" /> 1-2-1 Maths & Science GCSE <em>(online)</em> – £20/h (offer till end 2025)</li>
-            <li><span className="dot blue" /> 1-2-1 Maths & Science GCSE <em>(face-to-face)</em> – £20/h (offer till end 2025)</li>
-            <li><span className="dot purple" /> 1-2-1 English GCSE <em>(online)</em> – £25/h</li>
-            <li><span className="dot purple" /> 1-2-1 English GCSE <em>(face-to-face)</em> – £35/h</li>
-            <li><span className="dot green" /> Small Groups (online) – Maths GCSE £15/h | Science GCSE £15/h | English £17.50/h | 11+ £15/h</li>
-          </ul>
-        </article>
+        <article className="offers-card">
+  <h2 className="offers-title">Current Offers- Till end of 2025</h2>
+
+  <ul className="offers-list">
+    <li className="offer">
+      <span className="dot amber" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">All block pre-booked lessons</span>
+          <span className="offer-badge">10% off fees</span>
+        </div>
+        <p className="offer-note">Applies to lessons booked and paid in advance.</p>
+      </div>
+    </li>
+
+    <li className="offer">
+      <span className="dot blue" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">1-2-1 Maths & Science GCSE</span>
+          <span className="offer-price">£20/h</span>
+        </div>
+        <p className="offer-note"><em>Online</em> — offer valid until end of 2025.</p>
+      </div>
+    </li>
+
+    <li className="offer">
+      <span className="dot blue" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">1-2-1 Maths & Science GCSE</span>
+          <span className="offer-price">£20/h</span>
+        </div>
+        <p className="offer-note"><em>Face-to-face</em> — offer valid until end of 2025.</p>
+      </div>
+    </li>
+
+    <li className="offer">
+      <span className="dot purple" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">1-2-1 English GCSE</span>
+          <span className="offer-price">£25/h</span>
+        </div>
+        <p className="offer-note"><em>Online</em></p>
+      </div>
+    </li>
+
+    <li className="offer">
+      <span className="dot purple" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">1-2-1 English GCSE</span>
+          <span className="offer-price">£35/h</span>
+        </div>
+        <p className="offer-note"><em>Face-to-face</em></p>
+      </div>
+    </li>
+
+    <li className="offer">
+      <span className="dot green" />
+      <div className="offer-main">
+        <div className="offer-top">
+          <span className="offer-name">Small Groups (online)</span>
+        </div>
+
+        <div className="offer-grid">
+          <div><span className="pill">Maths GCSE</span><span className="offer-price sm">£15/h</span></div>
+          <div><span className="pill">Science GCSE</span><span className="offer-price sm">£15/h</span></div>
+          <div><span className="pill">English</span><span className="offer-price sm">£17.50/h</span></div>
+          <div><span className="pill">11+</span><span className="offer-price sm">£15/h</span></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</article>
+
 
         {/* CTA */}
         <div className="about-cta">

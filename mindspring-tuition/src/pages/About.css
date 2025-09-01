@@ -120,22 +120,118 @@
 }
 /* Offers card (reuses .about-card styling) */
 /* Offers card (same styling as about-card but with extra gap) */
-.offers-card {
-  margin-top: 2rem;   /* 👈 adds space below the grid */
+/* ----- Offers Card (clean & responsive) ----- */
+.offers-card{
+  margin-top: clamp(1.6rem, 4vw, 2.2rem);
+  background:#ffffff;
+  border-radius:18px;
+  box-shadow:0 20px 60px rgba(2,8,23,.06);
+  padding: clamp(1.2rem, 2.4vw, 1.6rem);
 }
 
-.offers-card ul {
-  color: #334155;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.offers-title{
+  margin: 0 0 .8rem;
+  font-size: clamp(1.2rem, 2.2vw, 1.4rem);
+  color:#0F172A;
 }
 
-.offers-card li {
-  display: flex;
-  align-items: center;
-  gap: .55rem;
-  padding: .5rem 0;   /* a little more vertical breathing room */
-  font-size: .95rem;
+.offers-list{
+  list-style:none;
+  padding:0; margin:0;
+  display:grid;
+  gap: clamp(.75rem, 1.4vw, 1rem);
+}
+
+/* each offer row */
+.offer{
+  display:grid;
+  grid-template-columns: 20px 1fr;
+  align-items:flex-start;
+  gap:.8rem;
+  padding: .7rem 0;
+  border-bottom: 1px solid rgba(15,23,42,.07);
+}
+.offer:last-child{ border-bottom:none; }
+
+.offer .dot{
+  width:.7rem; height:.7rem; border-radius:50%;
+  margin-top:.4rem;
+  box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+.dot.blue{background:#2BA9FF;}
+.dot.purple{background:#8B5CF6;}
+.dot.green{background:#22C55E;}
+.dot.amber{background:#F59E0B;}
+
+/* text columns */
+.offer-main{ display:flex; flex-direction:column; gap:.25rem; }
+
+.offer-top{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:.8rem; flex-wrap:wrap;
+}
+
+.offer-name{
+  color:#0F172A;
+  font-weight:700;
+}
+
+.offer-price{
+  background:#0F172A;
+  color:#fff;
+  padding:.28rem .6rem;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.92rem;
+  white-space:nowrap;
+}
+.offer-price.sm{ font-size:.9rem; padding:.22rem .5rem; }
+
+.offer-badge{
+  background:linear-gradient(90deg,#ffcf33,#ffb300);
+  color:#0F172A;
+  padding:.28rem .6rem;
+  border-radius:999px;
+  font-weight:800;
+  font-size:.92rem;
+  white-space:nowrap;
+}
+
+.offer-note{
+  margin:0;
+  color:#1e293b;   /* darker slate for readability */
+  line-height:1.5;
+  font-size:.98rem;
+  font-weight:500; /* gives it a bit more presence */
+}
+
+
+/* mini grid for the small group line items */
+.offer-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap:.5rem .8rem;
+  margin-top:.25rem;
+}
+.offer-grid > div{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:.5rem; background:#f7fafc; border:1px solid #e6edf5; padding:.5rem .6rem; border-radius:10px;
+}
+
+.pill{
+  display:inline-block;
+  font-weight:700;
+  color:#0F172A;
+}
+
+/* --- Mobile tweaks --- */
+@media (max-width: 720px){
+  .offer-top{ align-items:flex-start; }
+  .offer-price, .offer-badge{ order:2; }
+  .offer-name{ order:1; }
+  .offer-grid{ grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 420px){
+  .offer-grid{ grid-template-columns: 1fr; }
 }
 

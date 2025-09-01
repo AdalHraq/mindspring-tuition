@@ -45,7 +45,7 @@ export default function Offer() {
         {/* CTA */}
         <div className="offer-cta">
           <Link className="offer-btn" to="/contact">📘 Contact Us</Link> {/* ✅ fixed */}
-          <p className="offer-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+         
         </div>
       </div>
     </section>
