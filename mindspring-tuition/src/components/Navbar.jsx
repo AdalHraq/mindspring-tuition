@@ -25,6 +25,7 @@ const Navbar = () => {
         {isOpen && <button className="close-btn" onClick={toggleMenu}>×</button>}
 
         <Link to="/" onClick={closeAll}>Home</Link>
+        <Link to="/" onClick={closeAll}>About Us</Link>
 
         <div className="dropdown" onClick={toggleDropdown}>
           <span className="dropdown-label">Services ▾</span>
@@ -45,7 +46,7 @@ const Navbar = () => {
         </div>
 
         <Link to="/offer" onClick={closeAll}>What We Offer</Link>
-        <Link to="/about" onClick={closeAll}>About Us</Link>
+        
         <Link to="/contact" onClick={closeAll}>Contact</Link>
 
         {/* Book Classes now routes to /contact */}

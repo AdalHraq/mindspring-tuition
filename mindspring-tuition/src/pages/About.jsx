@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";   // 👈 ADD THIS
+import { Link } from "react-router-dom";
 import "./About.css";
 
 export default function About() {
@@ -59,6 +59,19 @@ export default function About() {
           </article>
         </div>
 
+        {/* Offers Card */}
+        <article className="about-card offers-card">
+          <h2>Current Offers</h2>
+          <ul className="about-list">
+            <li><span className="dot amber" /> All block pre-booked lessons – <strong>10% discount</strong> on fees</li>
+            <li><span className="dot blue" /> 1-2-1 Maths & Science GCSE <em>(online)</em> – £20/h (offer till end 2025)</li>
+            <li><span className="dot blue" /> 1-2-1 Maths & Science GCSE <em>(face-to-face)</em> – £20/h (offer till end 2025)</li>
+            <li><span className="dot purple" /> 1-2-1 English GCSE <em>(online)</em> – £25/h</li>
+            <li><span className="dot purple" /> 1-2-1 English GCSE <em>(face-to-face)</em> – £35/h</li>
+            <li><span className="dot green" /> Small Groups (online) – Maths GCSE £15/h | Science GCSE £15/h | English £17.50/h | 11+ £15/h</li>
+          </ul>
+        </article>
+
         {/* CTA */}
         <div className="about-cta">
           <Link className="about-btn" to="/contact">📘 Contact Us </Link>
@@ -67,4 +80,5 @@ export default function About() {
       </div>
     </section>
   );
-} 
+}
+

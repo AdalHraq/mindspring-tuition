@@ -18,7 +18,7 @@
 
 .hero-text h1 {
   font-size: 2.5rem;
-  color: #d9e405;
+  color: #fdd835;
   margin-bottom: 1rem;
 }
 
@@ -38,7 +38,7 @@
 
 .hero-text a.cta-button {
   display: inline-block;
-  background: #d9e405;   /* dark blue */
+  background: #fdd835;   /* dark blue */
   color: #fff;           /* white text */
   border: none;
   padding: 0.75rem 2rem;
