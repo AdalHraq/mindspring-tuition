@@ -1,5 +1,6 @@
+// src/pages/Maths.jsx
 import React from "react";
-import { Link } from "react-router-dom";   // SPA navigation
+import { Link } from "react-router-dom";
 import "./Maths.css";
 import mathsImage from "../assets/maths-tutoring.jpg";
 
@@ -46,9 +47,7 @@ export default function Maths() {
 
             <div className="m-cta">
               <Link className="m-btn" to="/contact">📘 Contact Us</Link>
-              <p className="m-note">
-                We’ll map a plan that fits your child’s goals and timeline.
-              </p>
+              <p className="m-note">We’ll map a plan that fits your child’s goals and timeline.</p>
             </div>
           </div>
 
@@ -57,7 +56,7 @@ export default function Maths() {
           </figure>
         </div>
 
-        {/* ===== Current Offers (shared card) ===== */}
+        {/* Offers */}
         <section className="offers-card" aria-labelledby="offers-title-maths">
           <header className="offers-card__head">
             <h2 id="offers-title-maths">Current Offers – Till end of 2025</h2>
@@ -65,48 +64,48 @@ export default function Maths() {
           </header>
 
           <ul className="offers-list">
-            <li className="offer-row">
+            <li className="offers-item">
               <span className="dot dot-amber" />
-              <div className="offer-main">
+              <div className="offers-item__text">
                 <strong>All block pre-booked lessons</strong>
-                <p className="offer-sub">Applies to lessons booked and paid in advance.</p>
+                <p className="offer-note">Applies to lessons booked and paid in advance.</p>
               </div>
             </li>
 
-            <li className="offer-row">
+            <li className="offers-item">
               <span className="dot dot-blue" />
-              <div className="offer-main">
+              <div className="offers-item__text">
                 <strong>1-2-1 Maths &amp; Science GCSE</strong>
-                <p className="offer-sub"><em>Online</em> — offer valid until end of 2025.</p>
+                <p className="offer-note"><em>Online</em> — offer valid until end of 2025.</p>
               </div>
-              <span className="price">£20/h</span>
+              <span className="price-chip">£25/h</span>
             </li>
 
-            <li className="offer-row">
+            <li className="offers-item">
               <span className="dot dot-blue" />
-              <div className="offer-main">
+              <div className="offers-item__text">
                 <strong>1-2-1 Maths &amp; Science GCSE</strong>
-                <p className="offer-sub"><em>Face-to-face</em> — offer valid until end of 2025.</p>
+                <p className="offer-note"><em>Face-to-face</em> — offer valid until end of 2025.</p>
               </div>
-              <span className="price">£20/h</span>
+              <span className="price-chip">£25/h</span>
             </li>
 
-            <li className="offer-row">
+            <li className="offers-item">
               <span className="dot dot-purple" />
-              <div className="offer-main">
+              <div className="offers-item__text">
                 <strong>1-2-1 English GCSE</strong>
-                <p className="offer-sub"><em>Online</em></p>
+                <p className="offer-note"><em>Online</em></p>
               </div>
-              <span className="price">£25/h</span>
+              <span className="price-chip">£25/h</span>
             </li>
 
-            <li className="offer-row">
+            <li className="offers-item">
               <span className="dot dot-purple" />
-              <div className="offer-main">
+              <div className="offers-item__text">
                 <strong>1-2-1 English GCSE</strong>
-                <p className="offer-sub"><em>Face-to-face</em></p>
+                <p className="offer-note"><em>Face-to-face</em></p>
               </div>
-              <span className="price">£35/h</span>
+              <span className="price-chip">£25/h</span>
             </li>
           </ul>
 
@@ -114,20 +113,16 @@ export default function Maths() {
             <h3>Small Groups (online)</h3>
             <div className="group-grid">
               <div className="group-pill">
-                <span>Maths GCSE</span>
-                <strong className="pill-price">£15/h</strong>
+                <span>Maths GCSE</span><strong className="pill-price">£15/h</strong>
               </div>
               <div className="group-pill">
-                <span>Science GCSE</span>
-                <strong className="pill-price">£15/h</strong>
+                <span>Science GCSE</span><strong className="pill-price">£15/h</strong>
               </div>
               <div className="group-pill wide">
-                <span>English</span>
-                <strong className="pill-price">£17.50/h</strong>
+                <span>English</span><strong className="pill-price">£17.50/h</strong>
               </div>
               <div className="group-pill">
-                <span>11+</span>
-                <strong className="pill-price">£15/h</strong>
+                <span>11+</span><strong className="pill-price">£15/h</strong>
               </div>
             </div>
           </div>
@@ -149,8 +144,6 @@ export default function Maths() {
           </div>
         </div>
       </div>
-
-      {/* 👋 Removed the wave */}
     </section>
   );
 }
