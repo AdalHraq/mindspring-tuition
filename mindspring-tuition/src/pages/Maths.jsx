@@ -1,5 +1,6 @@
+// src/pages/Maths.jsx
 import React from "react";
-import { Link } from "react-router-dom";   // use Link for SPA navigation
+import { Link } from "react-router-dom";
 import "./Maths.css";
 import mathsImage from "../assets/maths-tutoring.jpg";
 
@@ -46,9 +47,7 @@ export default function Maths() {
 
             <div className="m-cta">
               <Link className="m-btn" to="/contact">📘 Contact Us</Link>
-              <p className="m-note">
-                We’ll map a plan that fits your child’s goals and timeline.
-              </p>
+              <p className="m-note">We’ll map a plan that fits your child’s goals and timeline.</p>
             </div>
           </div>
 
@@ -56,6 +55,78 @@ export default function Maths() {
             <img src={mathsImage} alt="Student practicing maths problem solving" />
           </figure>
         </div>
+
+        {/* Offers */}
+        <section className="offers-card" aria-labelledby="offers-title-maths">
+          <header className="offers-card__head">
+            <h2 id="offers-title-maths">Current Offers – Till end of 2025</h2>
+            <span className="offers-badge">10% off fees</span>
+          </header>
+
+          <ul className="offers-list">
+            <li className="offers-item">
+              <span className="dot dot-amber" />
+              <div className="offers-item__text">
+                <strong>All block pre-booked lessons</strong>
+                <p className="offer-note">Applies to lessons booked and paid in advance.</p>
+              </div>
+            </li>
+
+            <li className="offers-item">
+              <span className="dot dot-blue" />
+              <div className="offers-item__text">
+                <strong>1-2-1 Maths &amp; Science GCSE</strong>
+                <p className="offer-note"><em>Online</em> — offer valid until end of 2025.</p>
+              </div>
+              <span className="price-chip">£25/h</span>
+            </li>
+
+            <li className="offers-item">
+              <span className="dot dot-blue" />
+              <div className="offers-item__text">
+                <strong>1-2-1 Maths &amp; Science GCSE</strong>
+                <p className="offer-note"><em>Face-to-face</em> — offer valid until end of 2025.</p>
+              </div>
+              <span className="price-chip">£25/h</span>
+            </li>
+
+            <li className="offers-item">
+              <span className="dot dot-purple" />
+              <div className="offers-item__text">
+                <strong>1-2-1 English GCSE</strong>
+                <p className="offer-note"><em>Online</em></p>
+              </div>
+              <span className="price-chip">£25/h</span>
+            </li>
+
+            <li className="offers-item">
+              <span className="dot dot-purple" />
+              <div className="offers-item__text">
+                <strong>1-2-1 English GCSE</strong>
+                <p className="offer-note"><em>Face-to-face</em></p>
+              </div>
+              <span className="price-chip">£25/h</span>
+            </li>
+          </ul>
+
+          <div className="offer-groups">
+            <h3>Small Groups (online)</h3>
+            <div className="group-grid">
+              <div className="group-pill">
+                <span>Maths GCSE</span><strong className="pill-price">£15/h</strong>
+              </div>
+              <div className="group-pill">
+                <span>Science GCSE</span><strong className="pill-price">£15/h</strong>
+              </div>
+              <div className="group-pill wide">
+                <span>English</span><strong className="pill-price">£17.50/h</strong>
+              </div>
+              <div className="group-pill">
+                <span>11+</span><strong className="pill-price">£15/h</strong>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Mini cards */}
         <div className="m-mini">
@@ -68,13 +139,11 @@ export default function Maths() {
             <p>Question sets that hit weak spots and build quick wins.</p>
           </div>
           <div className="mini-card">
-            <h3>Stretch & Challenge</h3>
+            <h3>Stretch &amp; Challenge</h3>
             <p>Enrichment problems for high attainers aiming for top marks.</p>
           </div>
         </div>
       </div>
-
-      {/* 👋 Removed the wave */}
     </section>
   );
 }

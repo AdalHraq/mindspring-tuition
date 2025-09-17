@@ -26,6 +26,7 @@ export default function Offer() {
               <li><strong>Full Subject Coverage</strong> – Verbal, Non-Verbal, Maths, and English.</li>
               <li><strong>Small Group &amp; 1:1 Options</strong> – Choose the style that works best.</li>
               <li><strong>Exam-Focused Resources</strong> – Practice papers, mock exams, and insider tips.</li>
+              <li><strong>Early Years Support </strong> - Foundational literacy, numeracy, and learning habits to give young learners the best possible start.</li>
             </ul>
           </article>
 
@@ -44,7 +45,7 @@ export default function Offer() {
         {/* CTA */}
         <div className="offer-cta">
           <Link className="offer-btn" to="/contact">📘 Contact Us</Link> {/* ✅ fixed */}
-          <p className="offer-note">We’ll map a plan that fits your child’s goals and timeline.</p>
+         
         </div>
       </div>
     </section>

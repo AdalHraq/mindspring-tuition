@@ -9,7 +9,10 @@ const Navbar = () => {
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
-  const closeAll = () => { setIsOpen(false); setDropdownOpen(false); };
+  const closeAll = () => { 
+    setIsOpen(false); 
+    setDropdownOpen(false); 
+  };
 
   return (
     <header className="navbar">
@@ -25,6 +28,7 @@ const Navbar = () => {
         {isOpen && <button className="close-btn" onClick={toggleMenu}>×</button>}
 
         <Link to="/" onClick={closeAll}>Home</Link>
+        <Link to="/about" onClick={closeAll}>About Us</Link> {/* ✅ fixed */}
 
         <div className="dropdown" onClick={toggleDropdown}>
           <span className="dropdown-label">Services ▾</span>
@@ -45,7 +49,6 @@ const Navbar = () => {
         </div>
 
         <Link to="/offer" onClick={closeAll}>What We Offer</Link>
-        <Link to="/about" onClick={closeAll}>About Us</Link>
         <Link to="/contact" onClick={closeAll}>Contact</Link>
 
         {/* Book Classes now routes to /contact */}

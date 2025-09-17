@@ -10,11 +10,11 @@ import examTechniqueImage from "../assets/examtechnique.jpg";
 
 function HeroSection() {
   const slides = [
-    { id: 1, image: mathImage, alt: "Student studying math", title: "Math Tutoring" },
-    { id: 2, image: boyImage, alt: "Student learning", title: "11+ Preparation" },
-    { id: 3, image: englishImage, alt: "Student working on English", title: "English Support" },
-    { id: 4, image: scienceImage, alt: "Student studying science", title: "Science Help" },
-    { id: 5, image: examTechniqueImage, alt: "Student practicing exam techniques", title: "Exam Technique" },
+    { id: 1, image: mathImage, alt: "Student studying math", title: "Maths GCSE" },
+    { id: 2, image: boyImage, alt: "Student learning", title: "11+ " },
+    { id: 3, image: englishImage, alt: "Student working on English", title: "English GCSE" },
+    { id: 4, image: scienceImage, alt: "Student studying science", title: "Science GCSE" },
+    { id: 5, image: examTechniqueImage, alt: "Student practicing exam techniques", title: "Early Years" },
   ];
 
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -34,7 +34,7 @@ function HeroSection() {
       <div className="hero-container">
         {/* LEFT SIDE TEXT */}
         <div className="hero-text">
-          <h1>Achieve 11+ & GCSE, sprint to success, and achieve academic excellence</h1>
+          <h1>Achieve 11+ Success with Confidence</h1>
           <p>Tailored lessons, expert tutors, and a proven track record of results.</p>
           {/* ❌ Removed buttons completely */}
         </div>
